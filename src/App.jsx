@@ -1,10 +1,12 @@
 
 import './App.css';
+
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { Home } from './Pages/home';
 import { Page1 } from './Pages/page1';
 import { Page2 } from './Pages/page2';
 import { Page3 } from './Pages/page3';
+import Header from './components/header';
 
 
 
@@ -12,7 +14,7 @@ import { Page3 } from './Pages/page3';
 
 function App() {
   return (
-
+    <div>
     <Router>
       <Routes>
         <Route path='/' element={ <Home/> }/>
@@ -22,7 +24,10 @@ function App() {
       
       </Routes>
     </Router>
-  )
+    
+      <Header />
+    </div>
+  );
 
 }
-export default App
+export default App;
